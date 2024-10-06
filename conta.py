@@ -6,7 +6,11 @@ class Conta:
         #Todo: Implementar
     
     def depositar(self, valor):
-        #Todo: Implementar
+        if valor > 0:
+            self.saldo += valor
+            print('Depósito realizado com sucesso')
+        else:
+            print('Valor inválido para depósito')
         
     def sacar(self, valor):
         #Todo: Implementar

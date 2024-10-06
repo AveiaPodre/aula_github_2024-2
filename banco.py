@@ -12,7 +12,11 @@ class Banco (object):
         #TODO: Implementar
     
     def deposito(self, conta, valor):
-        #TODO: Implementar
+        if conta in self.contas:
+            conta.depositar(valor)
+            print('Depósito realizado com sucesso')
+        else:
+            print('Conta não encontrada')
     
     def saque(self, conta, valor):
         #TODO: Implementar
