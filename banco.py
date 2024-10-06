@@ -61,8 +61,11 @@ class Banco(object):
         return False
     
     def deposito(self, conta, valor):
-        #TODO: Implementar
-        return
+        if conta in self.contas:
+            conta.depositar(valor)
+            print('Depósito realizado com sucesso')
+        else:
+            print('Conta não encontrada')
     
     def saque(self, conta, valor):
         #TODO: Implementar

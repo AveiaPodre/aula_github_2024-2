@@ -8,8 +8,11 @@ class Conta:
         return self.saldo
     
     def depositar(self, valor):
-        #Todo: Implementar]
-        return
+        if valor > 0:
+            self.saldo += valor
+            print('Depósito realizado com sucesso')
+        else:
+            print('Valor inválido para depósito')
         
     def sacar(self, valor):
         #Todo: Implementar
