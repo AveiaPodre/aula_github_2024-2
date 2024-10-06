@@ -3,7 +3,7 @@ class Conta:
         #TODO: Implementar
 
     def consultar_saldo(self):
-        #Todo: Implementar
+        return self.saldo
     
     def depositar(self, valor):
         #Todo: Implementar

@@ -21,4 +21,4 @@ class Banco (object):
         #TODO: Implementar
     
     def saldo(self, conta):
-        #TODO: Implementar
+        return conta.consultar_saldo()
