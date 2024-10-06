@@ -4,7 +4,20 @@ class Banco(object):
         self.contas = []
     
     def inserir_cliente(self, cliente):
-        #TODO: Implementar
+        """
+        Insere um novo cliente no conjunto de clientes.
+        Adiciona o cliente fornecido ao conjunto de clientes da instância atual.
+        Args:
+            cliente (dict): Um dicionário contendo as informações do cliente.
+        Returns:
+            None
+        """
+        if cliente in self.clientes:
+            print("Cliente já existe.")
+            return
+        
+        self.clientes.append(cliente)
+        print("Cliente inserido com sucesso.")
         return
     
     def inserir_conta(self):
