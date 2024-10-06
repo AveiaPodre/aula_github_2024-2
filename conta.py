@@ -14,13 +14,6 @@ class Conta:
         else:
             print('Valor inválido para depósito')
         
-    def sacar(self, valor):
-        #Todo: Implementar
-        return
-    
-    def transferir(self, conta_destino, valor):
-        #Todo: Implementar
-        return
     
     
     
