@@ -1,3 +1,5 @@
+import re
+
 class Banco(object):
     def __init__(self):
         self.clientes = []
