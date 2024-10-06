@@ -1,12 +1,7 @@
-import re
-
-class Banco (object):
-    clientes = []
-    contas = []
-
+class Banco(object):
     def __init__(self):
-        #TODO: Implementar
-        return
+        self.clientes = []
+        self.contas = []
     
     def inserir_cliente(self, cliente):
         #TODO: Implementar
