@@ -1,17 +1,11 @@
+import re
+
 class Banco(object):
     def __init__(self):
         self.clientes = []
         self.contas = []
     
     def inserir_cliente(self, cliente):
-        """
-        Insere um novo cliente no conjunto de clientes.
-        Adiciona o cliente fornecido ao conjunto de clientes da instância atual.
-        Args:
-            cliente (dict): Um dicionário contendo as informações do cliente.
-        Returns:
-            None
-        """
         if cliente in self.clientes:
             print("Cliente já existe.")
             return
@@ -21,12 +15,6 @@ class Banco(object):
         return
     
     def inserir_conta(self):
-        """
-        Insere uma nova conta no conjunto de contas.
-        Adiciona a conta fornecida ao conjunto de contas da instância atual.
-        Returns:
-            None
-        """
         cpf = input("Digite o CPF do titular (somente números): ")
         if not re.match(r'^\d{11}$', cpf):
             print("CPF inválido. Deve conter exatamente 11 dígitos.")
@@ -59,8 +47,11 @@ class Banco(object):
         return False
     
     def deposito(self, conta, valor):
-        #TODO: Implementar
-        return
+        if conta in self.contas:
+            conta.depositar(valor)
+            print('Depósito realizado com sucesso')
+        else:
+            print('Conta não encontrada')
     
     def saque(self, conta, valor):
         if conta in self.contas:
