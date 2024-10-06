@@ -54,8 +54,13 @@ class Banco(object):
             print('Conta não encontrada')
     
     def saque(self, conta, valor):
-        #TODO: Implementar
-        return
+        if conta in self.contas:
+            if conta.sacar(valor):
+                print("Saque realizado com sucesso.")
+            else:
+                print("Saldo insuficiente.")
+        else:
+            print("Conta não encontrada.")
     
     def transferencia(self, conta_origem, conta_destino, valor):
         #TODO: Implementar

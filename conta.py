@@ -13,7 +13,17 @@ class Conta:
             print('Depósito realizado com sucesso')
         else:
             print('Valor inválido para depósito')
-        
+     
+    def sacar(self, valor):
+        if valor > 0 and valor <= self.saldo:
+            self.saldo -= valor
+            return True
+        else:
+            return False
+    
+    def transferir(self, conta_destino, valor):
+        #Todo: Implementar
+        return
     
     
     
