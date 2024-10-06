@@ -12,8 +12,11 @@ class Conta:
         return
         
     def sacar(self, valor):
-        #Todo: Implementar
-        return
+        if valor > 0 and valor <= self.saldo:
+            self.saldo -= valor
+            return True
+        else:
+            return False
     
     def transferir(self, conta_destino, valor):
         #Todo: Implementar
