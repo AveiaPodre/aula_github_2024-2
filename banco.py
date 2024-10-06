@@ -1,6 +1,7 @@
-class Banco (object):
+class Banco(object):
     def __init__(self):
-        #TODO: Implementar
+        self.clientes = []
+        self.contas = []
     
     def inserir_cliente(self, cliente):
         #TODO: Implementar
