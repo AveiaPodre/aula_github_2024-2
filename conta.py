@@ -4,10 +4,8 @@ class Conta:
         self.titular = titular
         self.saldo = saldo
         
-
     def consultar_saldo(self):
-        #Todo: Implementar
-        return
+        return self.saldo
     
     def depositar(self, valor):
         #Todo: Implementar]
