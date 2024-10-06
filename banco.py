@@ -53,8 +53,10 @@ class Banco(object):
         return
     
     def autenticar(self, cliente):
-        #TODO: Implementar
-        return
+        for c in self.clientes:
+            if c.nome == cliente.nome:
+                return True
+        return False
     
     def deposito(self, conta, valor):
         #TODO: Implementar
